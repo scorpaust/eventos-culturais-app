@@ -1,9 +1,7 @@
 import { Event } from '@/types/events'
 
 export const getAllEvents = async (filter = {}) => {
-    const response = await fetch(
-        'https://eventos-culturais-app-default-rtdb.europe-west1.firebasedatabase.app/eventos.json'
-    )
+    const response = await fetch(`${process.env.DB_URL}/eventos.json`)
 
     const data = await response.json()
 

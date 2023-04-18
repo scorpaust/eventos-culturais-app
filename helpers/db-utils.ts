@@ -1,5 +1,4 @@
 import * as mongoDB from 'mongodb'
-import { Comment } from '@/types/comments'
 
 export async function connectDatabase(dbName: string) {
     const client = await mongoDB.MongoClient.connect(
